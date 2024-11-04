@@ -1,0 +1,116 @@
+
+body {
+  margin: 0;
+}
+
+
+
+.container {
+  width: 95%;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer {
+  width: 100%;
+}
+
+:root {
+  --var-oscuro: rgb(37, 36, 34);
+  --var-claro: rgb(245,246,240);
+  --var-rojo-naranja: rgb(204, 81, 32);
+  --var-rojo-naranja-modificado: rgba(204, 81, 32, 0.5);
+}
+
+/* -----------------PROGRAMACIÓN--------------------- */
+
+* {
+  font-family: Helvetica, Arial, sans-serif;
+  color: rgb(37, 36, 34);
+}
+
+a:visited {
+  color: inherit; /* O usa cualquier color específico que desees */
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    margin-block: 2px;
+  }
+
+  & a:first-child {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: lowercase;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    letter-spacing: -2px;
+  }
+
+  & a:nth-child(3) {
+    color: var(--var-rojo-naranja-modificado);
+  }
+}
+
+
+main {
+  & h1 {
+    text-align: center;
+    font-size: 48px;
+  }
+}
+
+ol {
+  padding-left: 145px;
+
+  & h2 {
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', serif;
+  } 
+  & li {
+    font-family: Georgia, 'Times New Roman', serif;
+    padding: 5px 5px 5px 0;
+    font-weight: 500;
+
+    & ul {
+      padding-left: 70px;
+      padding-top: px;
+      
+      a {
+        font-family: Georgia, 'Times New Roman', serif;
+        color: var(--var-rojo-naranja);
+      }
+
+
+      li:first-child {
+        list-style-image: url("/img/icon-museum.svg");
+
+      }
+      li:nth-child(2) {
+        list-style-image: url("/img/icon-calendar.svg");
+      }
+      li:last-child {
+        list-style-image: url("/img/icon-web-link.svg");
+      }
+    }
+  }
+}
+
+
+
+
