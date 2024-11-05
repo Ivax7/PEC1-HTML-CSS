@@ -1,19 +1,10 @@
+* {
+  color: rgb(37, 36, 34);
+  font-family: Georgia, 'Times New Roman', serif;
+}
 
 body {
   margin: 0;
-}
-
-
-
-.container {
-  width: 95%;
-  max-width: 850px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.footer {
-  width: 100%;
 }
 
 :root {
@@ -23,15 +14,30 @@ body {
   --var-rojo-naranja-modificado: rgba(204, 81, 32, 0.5);
 }
 
-/* -----------------PROGRAMACIÓN--------------------- */
-
-* {
-  font-family: Helvetica, Arial, sans-serif;
-  color: rgb(37, 36, 34);
+.container {
+  width: 95%;
+  max-width: 850px;
+  margin: auto;
 }
 
+footer {
+  width: 100%;
+  text-align: center;
+  background-color: var(--var-rojo-naranja);
+  padding: 8px 0; /* Reduce el padding */
+  margin-top: 45px;
+}
+
+footer p {
+  color: white;  
+  font-size: 10px; /* Reduce el tamaño de fuente */
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* -----------------PROGRAMACIÓN--------------------- */
+
 a:visited {
-  color: inherit; /* O usa cualquier color específico que desees */
+  color: inherit;
 }
 
 a {
@@ -43,74 +49,173 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  & a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 14px;
-    margin-block: 2px;
-  }
-
-  & a:first-child {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 40px;
-    font-weight: bold;
-    text-transform: lowercase;
-    padding-top: 20px;
-    padding-bottom: 5px;
-    letter-spacing: -2px;
-  }
-
-  & a:nth-child(3) {
-    color: var(--var-rojo-naranja-modificado);
-  }
 }
 
+nav a {
+  font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px; /* Reduce el tamaño de fuente */
+  line-height: 1.6;
+}
 
-main {
-  & h1 {
-    text-align: center;
-    font-size: 48px;
-  }
+nav a:first-child {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 28px; /* Reduce el tamaño de fuente */
+  font-weight: bold;
+  text-transform: lowercase;
+  padding-top: 10px;
+  padding-bottom: 3px;
+  letter-spacing: -1px;
+}
+
+.container-programacion nav a:nth-child(3) {
+  color: var(--var-rojo-naranja-modificado);
+}
+
+main h1 {
+  text-align: center;
+  font-size: 42px; /* Reduce el tamaño de fuente */
+  font-family: Helvetica, Arial, sans-serif;
+  margin-block: 30px;
 }
 
 ol {
-  padding-left: 145px;
+  padding-left: 145px; /* Ajusta el padding para que quepa mejor */
+}
 
-  & h2 {
-    font-size: 18px;
+ol h2 {
+  font-size: 18px; /* Reduce el tamaño de fuente */
+  font-weight: 500;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+ol li {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 500;
+}
+
+ol li ul {
+  padding-left: 70px;
+  font-size: 14px;
+}
+
+ol li ul a {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--var-rojo-naranja);
+
+  & em {
     font-family: Georgia, 'Times New Roman', serif;
-  } 
-  & li {
-    font-family: Georgia, 'Times New Roman', serif;
-    padding: 5px 5px 5px 0;
-    font-weight: 500;
-
-    & ul {
-      padding-left: 70px;
-      padding-top: px;
-      
-      a {
-        font-family: Georgia, 'Times New Roman', serif;
-        color: var(--var-rojo-naranja);
-      }
-
-
-      li:first-child {
-        list-style-image: url("/img/icon-museum.svg");
-
-      }
-      li:nth-child(2) {
-        list-style-image: url("/img/icon-calendar.svg");
-      }
-      li:last-child {
-        list-style-image: url("/img/icon-web-link.svg");
-      }
-    }
+    color: var(--var-rojo-naranja);
   }
+}
+
+.enlace-externo {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--var-rojo-naranja);
+}
+
+ol li ul a:visited {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--var-rojo-naranja);
+}
+
+ol li ul li:first-child {
+  list-style-image: url("/img/icon-museum.svg");
+}
+
+ol li ul li:nth-child(2) {
+  list-style-image: url("/img/icon-calendar.svg");
+}
+
+ol li ul li:last-child {
+  list-style-image: url("/img/icon-web-link.svg");
+}
+
+
+
+/* Estilo general para los enlaces externos */
+.enlace-externo {
+  position: relative;
+  padding-right: 15px; /* Espacio para el icono */
+  text-decoration: none;
+}
+
+/* Icono de enlace externo (normal) */
+.enlace-externo::after {
+  content: "";
+  position: absolute;
+  right: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px; /* Ajusta el tamaño de la imagen */
+  height: 12px;
+  background-image: url("/img/external-link.svg");
+  background-size: cover;
+}
+
+/* Icono en el estado :hover (imagen modificada) */
+.enlace-externo:hover::after {
+  background-image: url("/img/external-link-modif.svg");
 }
 
 
 
 
+
+/* --------------- MUSEOS ------------------ */
+
+.container-museo main {
+  padding-inline: 50px;
+}
+
+.container-museo nav a:nth-child(4) {
+  color: var(--var-rojo-naranja-modificado);
+}
+
+.container-museo h1 {
+  margin-block: 30px;
+}
+
+.container-museo p {
+  padding-inline: 45px 20px;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.container-museo ul {
+  padding-left: 60px;
+  font-size: 14px;
+}
+
+.container-museo ul li {
+  padding-block: 5px;
+}
+
+.container-museo h2 {
+  font-family: Helvetica, Arial, sans-serif;;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+figure img {
+  width: 550px;
+}
+
+figcaption {
+  font-size: 10px;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.enlace-externo:visited {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--var-rojo-naranja);
+}
