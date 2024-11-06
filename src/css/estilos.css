@@ -49,6 +49,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 25px;
 }
 
 nav a {
@@ -191,6 +192,7 @@ ol li ul li:last-child {
 
 .container-museo ul li {
   padding-block: 5px;
+  list-style: square;
 }
 
 .container-museo h2 {
@@ -206,7 +208,7 @@ figure {
 }
 
 figure img {
-  width: 550px;
+  width: 525px;
 }
 
 figcaption {
@@ -218,4 +220,124 @@ figcaption {
 .enlace-externo:visited {
   font-family: Georgia, 'Times New Roman', serif;
   color: var(--var-rojo-naranja);
+}
+
+
+
+/* --------------- ARTICULO ------------------ */
+
+
+
+.container-articulo nav a:nth-child(2) {
+  color: var(--var-rojo-naranja-modificado);
+}
+
+.container-articulo h1 {
+  font-size: 54px;
+  margin-block: 10px;
+}
+
+.container-articulo main {
+  display: flex;
+  padding-inline: 60px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-articulo h3 {
+  padding-inline: 14px;
+  line-height: 1.6;
+  font-weight: 100;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.info {
+  margin-block: 15px;
+  font-weight: 800;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.autora {
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--var-rojo-naranja);
+}
+
+.fecha {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  padding: 0;
+  margin: 0;
+}
+
+
+.container-articulo figure {
+  margin: 0;
+}
+
+.container-articulo figure img {
+  width: 100%;
+}
+
+.container-articulo figure figcaption {
+  width: 100%;
+  text-align: left;
+  font-weight: 100;
+}
+
+
+.container-articulo p {
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+
+#sangrado {
+  margin: 10px 5px;
+  padding-left: 110px;
+  line-height: 1.4;
+  font-size: 20px;
+}
+
+.container-articulo h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 34px;
+}
+
+iframe {
+  width: 100%;
+  height: 400px;
+}
+
+
+#autora img {
+  margin-top: 20px;
+  border-radius: 50%;
+  width: 150px;
+}
+
+#autora figcaption {
+  text-align: center;
+  padding: 0;
+  margin: 0;  
+}
+
+
+#autora figcaption p {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+#autora figcaption .enlace-externo {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+#autora figcaption p:first-child {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  margin-top: 5px;
 }
